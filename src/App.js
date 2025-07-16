@@ -24,7 +24,28 @@ const fadeInOutVariants = {
 };
 
 // MUI Theme
-const defaultTheme = createTheme();
+const defaultTheme = createTheme({
+    palette: {
+        mode: 'dark',
+        primary: {
+            main: '#181818', // very dark gray/black
+        },
+        secondary: {
+            main: '#FF8000', // orange accent
+        },
+        background: {
+            default: '#121212', // dark background
+            paper: '#181818',
+        },
+        text: {
+            primary: '#fff',
+            secondary: '#b0b0b0',
+        },
+    },
+    typography: {
+        fontFamily: '"JetBrains Mono", "Commissioner", "Roboto", "Helvetica", "Arial", sans-serif',
+    },
+});
 
 // The App
 export default function App({ data }) {
@@ -37,29 +58,10 @@ export default function App({ data }) {
 
     const updateFavicon = (tabIndex) => {
         const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-        link.type = 'image/x-icon';
-        link.rel = 'shortcut icon';
-
-        // Set the favicon based on tabIndex
-        switch (tabIndex) {
-            case 0:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-            case 1:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-            case 2:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-            default:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-        }
-
+        link.type = 'image/svg+xml';
+        link.rel = 'icon';
+        link.href = '/favicon.svg';
+        document.title = `${data.profile.name}`;
         document.getElementsByTagName('head')[0].appendChild(link);
     };
 
@@ -78,12 +80,31 @@ export default function App({ data }) {
                 overflow: 'auto',
                 width: '100%',
                 height: "100%",
-                bgcolor: 'rgba(0, 0, 0, 0.05)',
+                background: 'linear-gradient(to bottom, #7a2e00 0%, #ff8c1a 100%)',
             }}>
                 <Container component="main" maxWidth="lg">
-                    <Tabs value={activeTab} onChange={handleTabChange} centered sx={{ mb: 2 }}>
-                        <Tab label="Resume" />
-                        <Tab label="Updates" />
+                    <Tabs
+                        value={activeTab}
+                        onChange={handleTabChange}
+                        centered
+                        sx={{ mb: 2 }}
+                        textColor="secondary"
+                        indicatorColor="secondary"
+                    >
+                        <Tab label="Resume" sx={{
+                            color: '#fff',
+                            '&.Mui-selected': {
+                                color: '#fff',
+                                fontWeight: 'bold',
+                            }
+                        }} />
+                        <Tab label="Updates" sx={{
+                            color: '#fff',
+                            '&.Mui-selected': {
+                                color: '#fff',
+                                fontWeight: 'bold',
+                            }
+                        }} />
                         {/* <Tab label="Social Media" /> */}
                     </Tabs>
                     <AnimatePresence mode='wait'>

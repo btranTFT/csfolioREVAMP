@@ -46,7 +46,7 @@ export default function SocialFeed({ posts }) {
                         mb: 4,
 
                     }}>
-                        <Typography variant="h3" component="div" sx={{ color: 'white' }}>
+                        <Typography variant="h3" component="div" sx={{ color: 'white', fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
                             {posts.name}
                         </Typography>
                         <Avatar alt={posts.name} src={posts.avatar} sx={{

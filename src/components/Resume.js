@@ -13,6 +13,7 @@ import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Button from '@mui/material/Button';
 
 // Local
 import ResumeCard from './ResumeCard';
@@ -30,8 +31,8 @@ export default function ResumePortfolio({ profile }) {
                     {/* Profile */}
                     <ResumeCard>
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Avatar alt={profile.name} src={profile.avatar} sx={{ width: 100, height: 100 }} />
-                            <Typography variant="h5" component="div" sx={{ mt: 2 }}>
+                            <Avatar alt={profile.name} src={profile.avatar} sx={{ width: 160, height: 160, border: '4px solid', borderColor: 'secondary.main' }} />
+                            <Typography variant="h5" component="div" sx={{ mt: 2, fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
                                 {profile.name}
                             </Typography>
                             <Typography color="text.secondary" sx={{ mt: 1 }}>
@@ -55,7 +56,7 @@ export default function ResumePortfolio({ profile }) {
                         <Divider sx={{ mb: 2 }} />
 
                         {/* Skills */}
-                        <Typography variant="h6" component="div" sx={{ mt: 2 }}>
+                        <Typography variant="h6" component="div" sx={{ mt: 2, fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
                             Skills
                         </Typography>
                         <List component="nav" dense>
@@ -67,14 +68,30 @@ export default function ResumePortfolio({ profile }) {
                         </List>
                     </ResumeCard>
 
+                    {/* Certifications */}
+                    {profile.certifications && profile.certifications.length > 0 && (
+                        <ResumeCard>
+                            <Typography variant="h6" component="div" sx={{ textAlign: 'center', fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
+                                Certifications
+                            </Typography>
+                            <List component="nav" dense>
+                                {profile.certifications.map((cert, index) => (
+                                    <ListItemButton key={index} component="a" href={cert.file} target="_blank" rel="noopener noreferrer">
+                                        <ListItemText primary={cert.name} />
+                                    </ListItemButton>
+                                ))}
+                            </List>
+                        </ResumeCard>
+                    )}
+
                     {/* Social Media Links */}
                     <ResumeCard>
-                        <Typography variant="h6" component="div" sx={{ textAlign: 'center' }}>
+                        <Typography variant="h6" component="div" sx={{ textAlign: 'center', fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
                             Social Media
                         </Typography>
                         <Box sx={{ mt: 2, textAlign: 'center' }}>
                             {profile.socialMedia.map((media, index) => (
-                                <IconButton color="primary" key={index}>
+                                <IconButton color="secondary" key={index} component="a" href={media.url} target="_blank" rel="noopener noreferrer">
                                     <media.icon />
                                 </IconButton>
                             ))}
@@ -87,7 +104,7 @@ export default function ResumePortfolio({ profile }) {
 
                     {/* Education */}
                     <ResumeCard>
-                        <Typography variant="h6" component="div">
+                        <Typography variant="h6" component="div" sx={{ fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
                             Education
                         </Typography>
                         <Box sx={{ mt: 2 }}>
@@ -116,7 +133,7 @@ export default function ResumePortfolio({ profile }) {
 
                     {/* Work Experience */}
                     <ResumeCard>
-                        <Typography variant="h6" component="div">
+                        <Typography variant="h6" component="div" sx={{ fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
                             Work Experience
                         </Typography>
                         <Box sx={{ mt: 2 }}>
@@ -126,7 +143,9 @@ export default function ResumePortfolio({ profile }) {
                                         <Typography variant="subtitle1">{experience.title}</Typography>
                                         <Typography variant="body2" color="text.secondary">{experience.date}</Typography>
                                         <Typography variant="body2" sx={{ mt: 1 }}>
-                                            {experience.description}
+                                            {Array.isArray(experience.description)
+                                                ? experience.description.join(' ')
+                                                : experience.description}
                                         </Typography>
                                     </Box>
 
@@ -137,6 +156,33 @@ export default function ResumePortfolio({ profile }) {
 
                                 </React.Fragment>
                             ))}
+                        </Box>
+                    </ResumeCard>
+
+                    {/* Projects */}
+                    <ResumeCard>
+                        <Typography variant="h6" component="div" sx={{ fontFamily: 'Silkscreen, Commissioner, Roboto, Helvetica, Arial, sans-serif' }}>
+                            Projects
+                        </Typography>
+                        <Box sx={{ mt: 2 }}>
+                            {profile.projects && profile.projects.length > 0 ? (
+                                profile.projects.map((project, index) => (
+                                    <Box sx={{ mb: 2, display: 'flex', alignItems: 'flex-start', gap: 2 }} key={index}>
+                                        <img src={project.image} alt={project.title} style={{ width: 100, height: 100, objectFit: 'cover', borderRadius: 8 }} />
+                                        <Box>
+                                            <Typography variant="subtitle1">{project.title}</Typography>
+                                            <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                                                {project.description}
+                                            </Typography>
+                                            <Button variant="contained" color="secondary" href={project.url} target="_blank" rel="noopener noreferrer" sx={{ mt: 1 }}>
+                                                View on GitHub
+                                            </Button>
+                                        </Box>
+                                    </Box>
+                                ))
+                            ) : (
+                                <Typography variant="body2" color="text.secondary">No projects added yet.</Typography>
+                            )}
                         </Box>
                     </ResumeCard>
 

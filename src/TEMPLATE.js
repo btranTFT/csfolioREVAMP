@@ -3,120 +3,81 @@
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import SnapchatIcon from '@mui/icons-material/Twitter';
-import PinterestIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 // Data object that contains all of the data for the template.
 const data = {
     profile: {
-        name: "Sara Friends",
-        address: "C Java Place, Lowell, MA 07646",
-        avatar: "https://mui.com/static/images/avatar/1.jpg",
+        name: "Benjamin Tran",
+        address: "Los Angeles Metropolitan Area, California",
+        avatar: "/portrait.jpg.png",
         contacts: [
-            { icon: PhoneIcon, label: "Phone", value: "(978) 123-4567" },
-            { icon: EmailIcon, label: "Email", value: "sara_friends@student.uml.edu" },
-            { icon: HomeIcon, label: "Address", value: "123 Main St, City, Country" }
+            { icon: PhoneIcon, label: "Phone", value: "(909) 367-9168" },
+            { icon: EmailIcon, label: "Email", value: "btran083@outlook.com" }
         ],
         skills: [
-            { category: "Programming Languages:", skills: "C/C++, Java, Assembly" },
-            { category: "Scripting Languages:", skills: "Bash Shell, HTML" },
-            { category: "Operating Systems:", skills: "Unix/Linux, Mac OSX, Windows XP & Vista" },
-            { category: "Documentation:", skills: "MS Word, Excel, PowerPoint & Visio" },
+            { category: "Programming Languages:", skills: "Java, Python, C++, C#, SQL, MATLAB" },
+            { category: "Scripting & Web Languages:", skills: "HTML5, CSS3, JavaScript, TypeScript, Node.js, ADB (Android)" },
+            { category: "Tools:", skills: "Android Studio, Git, AWS, React, Material-UI, Node.js" }
         ],
         socialMedia: [
-            { icon: FacebookIcon },
-            { icon: InstagramIcon },
-            { icon: LinkedInIcon },
-            { icon: TwitterIcon },
-            { icon: SnapchatIcon },
-            { icon: PinterestIcon },
+            { icon: LinkedInIcon, url: "https://www.linkedin.com/in/btran083/" },
+            { icon: GitHubIcon, url: "https://github.com/btranTFT" },
         ],
         education: [
             {
                 degree: "M.S. in Computer Science",
-                date: "Anticipated May 20xx",
-                school: "University of Massachusetts Lowell - Lowell, MA",
-                gpa: "Overall GPA: 3.33, GPA in Major: 3.50"
+                date: "Expected Graduation, May 2026",
+                school: "California State Polytechnic University - Pomona, Pomona, California",
+                gpa: "Concentrations: Cybersecurity and Network Infrastructure\nRelated Coursework: Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Object-Oriented Programming, Statistics & Applications, Computer Architecture, Operating Systems, and Software Engineering"
             },
             {
-                degree: "B.S. in Computer Science",
-                date: "Anticipated May 20xx",
-                school: "University of Massachusetts Lowell - Lowell, MA",
-                gpa: "Overall GPA: 3.33, GPA in Major: 3.50"
+                degree: "B.S. in Biological Science",
+                date: "Graduated May 2022",
+                school: "California State Polytechnic University - Pomona, Pomona, California",
+                gpa: ""
             },
         ],
         experience: [
             {
-                title: "Front End Developer / w3schools.com",
-                date: "Jan 2015 - Current",
-                description: "Lorem ipsum dolor sit amet...",
+                title: "Amazon — FC Associate / IT Assistant",
+                date: "Chino, California | Sep 2020 – Jan 2022",
+                description: [
+                    "Created Python scripts to construct a pipeline that retrieved performance data from the AWS cross-regional team.",
+                    "Collaborated with IT teams to troubleshoot and resolve networking issues.",
+                    "Utilized various AWS resources such as Glue Crawlers, S3, Lambda, Redshift, and Quicksight to develop a dashboard displaying real time metrics.",
+                    "Utilized Microsoft Excel for data analysis and reporting, contributing to process optimization."
+                ]
+            }
+        ],
+        projects: [
+            {
+                title: "Study Room Tracker Web Service",
+                url: "https://github.com/SatelliteGear/RoomTracker-PROTOTYPE-frontbackend-test",
+                description: "A modern web application for managing and booking study rooms at Cal Poly Pomona University Library, featuring real-time availability, floor-based navigation, and a robust booking system.",
+                image: "/roomtracker.jpg"
             },
             {
-                title: "Computer Lab Monitor / University of Massachusetts Lowell",
-                date: "Jan 20xx - Present",
-                description: "Monitor lab activity for up to 50 users at a time. Perform basic hardware/software troubleshooting.",
-            },
-            {
-                title: "Technical Support Specialist / Commonwealth of Massachusetts, Information Technology Division",
-                date: "Summer 20xx",
-                description: "Supported and hosted state-wide agency systems and messaging services on platforms including HP Unix, Linux, MVS, and Windows Active Exchange. Assisted with server builds and maintenance. Reviewed, installed, set up, and assisted with active synching of BlackBerry mobile devices to Windows Email Exchange server.",
-            },
-            {
-                title: "Asperger’s Association of New England",
-                date: "Jun. 20xx - Aug. 20xx",
-                description: "Volunteered one day a week with data entry and basic financial accounting projects",
-            },
-            {
-                title: "Lifeguard",
-                date: "Summers 20xx – 20xx",
-                description: "YMCA, Lowell, MA",
-            },
+                title: "SMILES Molecule Generation",
+                url: "https://github.com/AbogAscended/Drug-Discovery",
+                description: "A project focused on computational drug discovery, leveraging data science and machine learning to identify potential drug candidates and analyze molecular interactions.",
+                image: "/drugdiscovery.jpg"
+            }
+        ],
+        certifications: [
+            { name: "Google Cybersecurity Professional Certificate", file: "/Google CyberSec.pdf" },
+            { name: "Practical Data Science on the AWS Cloud", file: "/AWS Data Science.pdf" },
+            { name: "AWS Cloud Technical Essentials", file: "/AWS Cloud Technical Essentials.pdf" }
         ],
     },
 
     posts: {
-        name: "Sara Friends",
-        avatar: "https://mui.com/static/images/avatar/1.jpg",
+        name: "Benjamin Tran",
+        avatar: "/portrait.jpg.png",
         background_image: "https://source.unsplash.com/random?wallpapers",
-        post_data: [
-            {
-                id: 1,
-                timestamp: "2 hours ago",
-                description: "Enjoying a sunny day at the beach!",
-                image: "https://source.unsplash.com/random?wallpapers"
-            },
-            {
-                id: 2,
-                timestamp: "5 hours ago",
-                description: "Just finished reading this amazing book.",
-                type: "note",
-            },
-            {
-                id: 3,
-                timestamp: "2 hours ago",
-                description: "Enjoying a sunny day at the beach!",
-                image: "https://source.unsplash.com/random?wallpapers"
-            },
-            {
-                id: 4,
-                timestamp: "5 hours ago",
-                description: "Just finished reading this amazing book.",
-                type: "note",
-            },
-            {
-                id: 5,
-                author: "John Doe",
-                avatar: "/path-to-avatar1.jpg",
-                timestamp: "2 hours ago",
-                description: "Enjoying a sunny day at the beach!",
-                image: "https://source.unsplash.com/random?wallpapers"
-            },
-        ],
+        post_data: [],
     }
 };
 
