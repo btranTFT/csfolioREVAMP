@@ -1,0 +1,42 @@
+/* ─── FlipSentences ─────────────────────────────────────────────────────── */
+
+.flip-sentences {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.4em;
+  line-height: 1.4;
+}
+
+.flip-sentence {
+  display: block;
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition:
+    opacity 250ms var(--ease),
+    transform 250ms var(--ease);
+}
+
+.flip-sentence--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.flip-sentence--exit {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 200ms var(--ease),
+    transform 200ms var(--ease);
+}
+
+.flip-sentence--enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-sentence {
+    transition: none;
+  }
+}

@@ -1,0 +1,146 @@
+/* ─── Education Timeline ─────────────────────────────────────────────────── */
+
+.edu-panel {
+  padding: var(--section-py) 0;
+}
+
+/* ── Timeline wrapper ── */
+.edu__timeline {
+  position: relative;
+  padding-top: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Center vertical line — desktop only */
+.edu__center-line {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .edu__center-line {
+    display: block;
+    position: absolute;
+    top: var(--sp-8);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--border) 10%,
+      var(--border) 90%,
+      transparent
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* ── Item ── */
+.edu__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-8);
+  z-index: 1;
+}
+
+/* Mobile: single column, left-aligned */
+.edu__dot {
+  display: none;
+}
+
+/* ── Card ── */
+.edu__card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  width: 100%;
+  transition: border-color var(--dur-fast) var(--ease),
+              background var(--dur-fast) var(--ease);
+}
+
+.edu__card:hover {
+  background: var(--card-hover);
+  border-color: var(--muted);
+}
+
+.edu__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin: 0;
+}
+
+.edu__degree {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.edu__school {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.edu__location {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  margin: 0;
+}
+
+.edu__note {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+  white-space: pre-line;
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-2);
+  margin-top: var(--sp-1);
+}
+
+/* ── Desktop: two-column alternating ── */
+@media (min-width: 768px) {
+  .edu__item {
+    width: 50%;
+    padding-right: var(--sp-8);
+  }
+
+  .edu__dot {
+    display: block;
+    position: absolute;
+    top: var(--sp-5);
+    right: calc(var(--sp-8) - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--muted);
+    border: 2px solid var(--bg);
+    z-index: 2;
+  }
+
+  /* Odd (right) items */
+  .edu__item--right {
+    align-self: flex-end;
+    padding-right: 0;
+    padding-left: var(--sp-8);
+  }
+
+  .edu__item--right .edu__dot {
+    left: calc(var(--sp-8) - 5px);
+    right: auto;
+  }
+}

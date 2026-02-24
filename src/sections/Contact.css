@@ -1,0 +1,82 @@
+/* ─── Contact Panel ──────────────────────────────────────────────────────── */
+
+.contact-panel {
+  padding: var(--section-py) 0;
+  padding-bottom: var(--sp-16);
+}
+
+.contact__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  padding-top: var(--sp-6);
+  max-width: 540px;
+}
+
+.contact__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Email row */
+.contact__row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.contact__email-link {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color var(--dur-fast) var(--ease),
+              color var(--dur-fast) var(--ease);
+}
+
+.contact__email-link:hover {
+  color: var(--text);
+  border-color: var(--muted);
+}
+
+.contact__copy {
+  font-size: var(--text-xs);
+  padding: 0.3rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.contact__copy--done {
+  color: #22c55e;
+}
+
+/* Social buttons */
+.contact__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.contact__social-btn {
+  font-size: var(--text-sm);
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  text-decoration: none;
+}
+
+/* Footer strip */
+.site-footer {
+  padding: var(--sp-6);
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+}

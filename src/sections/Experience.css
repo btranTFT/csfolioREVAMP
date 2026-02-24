@@ -1,0 +1,141 @@
+/* ─── Experience Panel ────────────────────────────────────────────────────── */
+
+.exp-panel {
+  padding: var(--section-py) 0;
+}
+
+/* ── Card list ── */
+.exp__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding-top: var(--sp-6);
+}
+
+/* ── Card ── */
+.exp__card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  transition: border-color var(--dur-fast) var(--ease),
+              background var(--dur-fast) var(--ease);
+}
+
+.exp__card:hover {
+  background: var(--card-hover);
+  border-color: var(--muted);
+}
+
+/* ── Card header ── */
+.exp__card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.exp__company-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+}
+
+.exp__company-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-md);
+  background: var(--muted-bg);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.exp__company {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 var(--sp-1);
+  line-height: 1.3;
+}
+
+.exp__role {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.exp__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--sp-1);
+  flex-shrink: 0;
+}
+
+.exp__type-tag {
+  font-size: 0.65rem;
+}
+
+.exp__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.exp__location {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+/* ── Bullet list ── */
+.exp__bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.exp__bullet {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  padding-left: var(--sp-4);
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp__bullet::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+/* ── Tags ── */
+.exp__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .exp__card-header {
+    flex-direction: column;
+  }
+  .exp__meta {
+    align-items: flex-start;
+  }
+}
+
+
