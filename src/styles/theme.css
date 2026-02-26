@@ -1,6 +1,5 @@
-/* ─── Design Tokens — nskr.dev mirror ──────────────────────────────────────
+/* ─── Design Tokens ────────────────────────────────────────────────────────
    Light-mode defaults on :root; dark overrides on body.dark
-   Token names kept aligned with the reference repo for traceability.
    ─────────────────────────────────────────────────────────────────────────── */
 
 :root {

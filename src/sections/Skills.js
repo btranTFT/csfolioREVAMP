@@ -1,5 +1,5 @@
 /**
- * Skills — tech stack by category, mirroring nskr.dev TechStack panel.
+ * Skills — tech stack grouped by category with tag pills.
  * Uses the Panel pattern: panel-header with screen-line-before, tech-tag pills.
  */
 import React from 'react';

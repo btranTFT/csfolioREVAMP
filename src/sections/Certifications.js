@@ -1,5 +1,5 @@
 /**
- * Certifications — 3-column responsive card grid, mirroring nskr.dev certifications section.
+ * Certifications — 3-column responsive card grid.
  */
 import React from 'react';
 import './Certifications.css';

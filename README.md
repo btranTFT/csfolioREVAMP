@@ -1,18 +1,18 @@
 # csfolioREVAMP
 
-Personal developer portfolio for **Benjamin Tran** — built with Create React App, plain CSS (no UI library), and a dark-first design inspired by [nskr.dev](https://www.nskr.dev).
+Personal developer portfolio for **Benjamin Tran**, built with Create React App and plain CSS (no UI library).
 
 ---
 
 ## ? Features
 
 - **Dark-first design** with an orange accent, Inter + JetBrains Mono typography
-- **Single-page layout** — Hero · About · Experience · Projects · Contact
+- **Single-page layout** ï¿½ Hero ï¿½ About ï¿½ Experience ï¿½ Projects ï¿½ Contact
 - **Sticky nav** with active-section highlighting and mobile hamburger drawer
 - **Scroll-reveal animations** via IntersectionObserver (respects `prefers-reduced-motion`)
-- **Data-driven content** — edit one file to update all portfolio content
-- **Accessible** — keyboard focus styles, skip-link, ARIA labels, semantic HTML
-- **GitHub Pages ready** — `homepage: "."` in `package.json`
+- **Data-driven content** ï¿½ edit one file to update all portfolio content
+- **Accessible** ï¿½ keyboard focus styles, skip-link, ARIA labels, semantic HTML
+- **GitHub Pages ready** ï¿½ `homepage: "."` in `package.json`
 
 ---
 
@@ -97,7 +97,7 @@ Output is in `build/`. The `"homepage": "."` in `package.json` ensures assets us
    npm run deploy
    ```
 
-Because this is a **single-page app with only anchor hash links** (no React Router), there is no need for a `404.html` redirect hack — every link is an `#id` anchor and the browser never requests a new URL path.
+Because this is a **single-page app with only anchor hash links** (no React Router), there is no need for a `404.html` redirect hack ï¿½ every link is an `#id` anchor and the browser never requests a new URL path.
 
 ---
 

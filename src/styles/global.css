@@ -1,4 +1,4 @@
-/* ─── Global Base Styles — nskr.dev mirror ───────────────────────────────────
+/* ─── Global Base Styles ───────────────────────────────────────────────────
    Zinc-neutral palette, Inter + JetBrains Mono, screen-line utilities,
    panel/section helpers, collapsible project cards, theme toggle support.
    ─────────────────────────────────────────────────────────────────────────── */
@@ -144,7 +144,7 @@ button:focus-visible {
   background: var(--muted-bg);
 }
 
-/* ── Tech Tag / Pill (neutral, nskr.dev style) ──────────────────────── */
+/* ── Tech Tag / Pill ────────────────────────────────────────────────── */
 .tech-tag {
   display: inline-flex;
   align-items: center;
@@ -175,7 +175,7 @@ button:focus-visible {
   padding-right: var(--container-px);
 }
 
-/* ── Panel (section wrapper, matches nskr.dev Panel component) ───────
+/* ── Panel (section wrapper) ──────────────────────────────────────────
    .panel-header has a full-viewport-width top edge line via ::before.
    ────────────────────────────────────────────────────────────────────── */
 .panel {

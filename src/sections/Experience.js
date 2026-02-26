@@ -1,5 +1,5 @@
 /**
- * Experience — panel pattern mirroring nskr.dev experiences section.
+ * Experience — panel pattern with company cards, role, bullets, and tech tags.
  * Panel header (screen-line-before) + company cards with role, period, bullets, tech tags.
  */
 import React from 'react';

@@ -1,5 +1,5 @@
 /**
- * Projects — collapsible accordion cards mirroring nskr.dev projects section.
+ * Projects — collapsible accordion cards with tag pills and source/live links.
  * Shows first 4 tags + "+N more", toggle to show all projects.
  */
 import React, { useState } from 'react';

@@ -1,4 +1,4 @@
-/* ─── Nav — nskr.dev mirror ──────────────────────────────────────────────────
+/* ─── Nav ────────────────────────────────────────────────────────────────────
    Sticky, backdrop-blur header. Font-mono links. Underline grows 0→100%
    on hover/active. Clock + theme toggle on the right.
    ─────────────────────────────────────────────────────────────────────────── */
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 0;
 }
 

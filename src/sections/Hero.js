@@ -1,5 +1,5 @@
 /**
- * Hero — profile-hero section mirroring nskr.dev/profile-hero.tsx
+ * Hero — profile-hero section
  * Circular avatar + online dot, FlipSentences subtitle, bio, CTA buttons, social links.
  */
 import React from 'react';

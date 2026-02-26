@@ -1,5 +1,5 @@
 /**
- * Education — alternating two-column timeline mirroring nskr.dev education section.
+ * Education — alternating two-column timeline on desktop, single-column on mobile.
  * Center vertical gradient line on desktop; single column on mobile.
  */
 import React from 'react';
