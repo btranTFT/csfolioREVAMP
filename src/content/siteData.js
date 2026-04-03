@@ -6,24 +6,22 @@ const siteData = {
   // ── Identity ──────────────────────────────────────────────────────────────
   name: "Benjamin Tran",
   initials: "BT",
-  tagline: "M.S. Computer Science Candidate",
+  tagline: "M.S. Computer Science Candidate (ML Focus)",
   flipSentences: [
     "M.S. Computer Science Candidate",
-    "ML Engineering & Security Research",
-    "Full-Stack Developer",
+    "Generative Audio ML & NLP",
+    "Full-Stack AI Systems",
     "Cal Poly Pomona",
   ],
-  subTagline: "Cal Poly Pomona · ML Engineering · Security Research · Full-Stack",
+  subTagline: "Cal Poly Pomona · Generative Audio ML · NLP · Full-Stack AI",
   about: "M.S. Computer Science candidate at Cal Poly Pomona, with a concentration " +
-    "in Cybersecurity and Network Infrastructure. I work across ML engineering, " +
-    "security research, and full-stack development. My current project, MIDI Remaster Lab, " +
-    "fine-tunes Meta's MusicGen to synthesize console-era audio from MIDI input, with a " +
-    "FastAPI backend, React frontend, and a suite of quantitative audio evaluation metrics. " +
-    "On the security side, I have implemented membership inference attacks and differential " +
-    "privacy defenses for a study replicating real-world healthcare tracking vulnerabilities. " +
-    "Previously at Amazon, I built cloud dashboards surfacing cross-regional performance " +
-    "metrics using AWS Glue, Lambda, and QuickSight. I am actively seeking roles in ML " +
-    "engineering, security, or full-stack development where I can ship things that matter.",
+    "specializing in generative audio models and natural language processing. I fine-tune " +
+    "MusicGen/AudioCraft transformers, build rigorous evaluation pipelines (including Fréchet " +
+    "Audio Distance and contour-based metrics), and deploy full-stack AI systems with FastAPI " +
+    "and React/TypeScript. My research includes chroma-conditioned generation workflows and " +
+    "reproducible ML-vs-baseline benchmarking. At Amazon, I built real-time AWS dashboards and " +
+    "Python automation while supporting incident triage across teams. I am seeking ML " +
+    "engineering, applied AI, and full-stack roles where research rigor meets production impact.",
   location: "Los Angeles Metropolitan Area, CA",
   email: "btran083@outlook.com",
   phone: "(909) 367-9168",
@@ -40,35 +38,74 @@ const siteData = {
   // Each category group becomes a labelled tag-pill block in the About section.
   skills: [
     {
-      category: "Languages",
-      items: ["Java", "Python", "C++", "C#", "SQL", "MATLAB"],
+      category: "Machine Learning / AI",
+      items: ["MusicGen (AudioCraft)", "Transformer Fine-tuning", "Generative Models", "Model Evaluation (FAD, PICS, F-measure)", "Chroma Conditioning"],
     },
     {
-      category: "Web & Scripting",
-      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Node.js", "ADB (Android)"],
+      category: "NLP / Data Science",
+      items: ["Natural Language Processing", "Text Classification", "Embeddings", "Statistical Analysis", "Reporting", "Dashboards"],
     },
     {
-      category: "Tools & Platforms",
-      items: ["AWS", "React", "Git", "Android Studio", "Material-UI"],
+      category: "Support / Ops",
+      items: ["Troubleshooting", "Log/Alert Review", "Incident Triage", "Root-Cause Analysis", "Documentation"],
+    },
+    {
+      category: "Programming",
+      items: ["Python", "Java", "HTML/CSS", "TypeScript"],
+    },
+    {
+      category: "Tools",
+      items: ["Microsoft Excel", "Git", "Office 365", "FastAPI", "React", "Vite"],
+    },
+    {
+      category: "Cloud / Systems",
+      items: ["AWS (S3, Lambda, Glue, Redshift, QuickSight)", "FluidSynth", "MIDI Processing"],
     },
   ],
 
   // ── Experience ────────────────────────────────────────────────────────────
   experience: [
     {
+      company: "Cal Poly Pomona",
+      icon: null,
+      role: "Research Assistant - Generative AI in Entertainment",
+      location: "Pomona, California",
+      period: "Oct 2025 - Present",
+      type: "Research",
+      bullets: [
+        "Fine-tuned Meta's MusicGen (autoregressive transformer LM pre-trained on 20K+ hours of music) with per-style checkpoints across 5 retro soundfonts (SNES, GBA, NDS, PS2, Wii), improving style adherence over the base model by Fréchet Audio Distance.",
+        "Engineered a chroma-conditioned generation pipeline (generate_with_chroma) that preserved melodic structure from MIDI-derived WAV prompts and reduced pitch contour deviation versus unconditioned generation across a 40+ file corpus.",
+        "Built a 4-metric evaluation suite (Pitch-Interval Contour Similarity, Pearson pitch correlation, Onset Alignment F-measure, Fréchet Audio Distance) to benchmark ML output against a deterministic FluidSynth baseline across all 5 soundfont styles.",
+        "Delivered a full-stack research interface (FastAPI + React/TypeScript) with real-time event logging and automated corpus evaluation scripts for reproducible ML-vs-baseline comparisons.",
+      ],
+      tags: ["MusicGen", "AudioCraft", "Python", "FastAPI", "React", "TypeScript", "FluidSynth", "FAD", "PICS"],
+    },
+    {
       company: "Amazon",
       icon: "amazon",
-      role: "FC Associate / IT Assistant",
+      role: "FC Associate / IT Support Assistant",
       location: "Chino, California",
-      period: "Sep 2020 – Jan 2022",
+      period: "Sep 2020 - Jan 2022",
       type: "Part-time",
       bullets: [
-        "Created Python scripts to construct a pipeline that retrieved performance data from the AWS cross-regional team.",
-        "Collaborated with IT teams to troubleshoot and resolve networking issues.",
-        "Utilized AWS Glue, S3, Lambda, Redshift, and QuickSight to develop a dashboard displaying real-time cross-team metrics.",
-        "Utilized Microsoft Excel for data analysis and reporting, contributing to process optimization.",
+        "Automated an operational reporting pipeline in Python, reducing manual retrieval and formatting for recurring stakeholder reports.",
+        "Built a near real-time monitoring dashboard (AWS Glue, S3, Lambda, Redshift, QuickSight) to track fulfillment KPIs and surface shift-level anomalies.",
+        "Triaged and resolved connectivity and system issues, maintained documentation, and communicated incident status to cross-functional partners to reduce repeat escalations.",
+        "Analyzed Excel datasets to identify operational patterns and recommend process improvements that informed floor-level workflow changes.",
       ],
-      tags: ["Python", "AWS", "Glue", "S3", "Lambda", "Redshift", "QuickSight"],
+      tags: ["Python", "AWS", "Glue", "S3", "Lambda", "Redshift", "QuickSight", "Troubleshooting", "Incident Triage", "Excel"],
+    },
+    {
+      company: "Ivy Leaf Academy",
+      icon: null,
+      role: "Coding Teacher",
+      location: "Chino Hills, California",
+      period: "Nov 2024 - Present",
+      type: "Part-time",
+      bullets: [
+        "Teach Scratch programming and computer literacy to students ages 6-12, and design adaptive lesson plans for diverse learning styles.",
+      ],
+      tags: ["Scratch", "Teaching", "Computer Literacy", "Curriculum Design"],
     },
   ],
 
@@ -96,8 +133,8 @@ const siteData = {
       title: "MIDI Remaster Lab",
       period: "2026",
       description:
-        "Transform MIDI files into console-style audio using soundfont synthesis (Baseline) or AI generation (ML mode). Supports SNES, GBA, NDS, PS2, and Wii soundfonts. Fine-tunes Meta's MusicGen with per-console AudioCraft checkpoints and implements four quantitative evaluation metrics (PICS, Pearson melody similarity, onset alignment F-measure, Fréchet Audio Distance).",
-      tags: ["Python", "FastAPI", "React", "TypeScript", "Vite", "MusicGen", "AudioCraft", "FluidSynth", "Machine Learning"],
+        "Compared deterministic MIDI-to-audio synthesis against fine-tuned MusicGen generation across 5 retro soundfont styles. Built the evaluation framework (Fréchet Audio Distance, Pitch-Interval Contour Similarity, onset F-measure), a FastAPI ML inference backend, and a React/TypeScript UI with real-time logging. Training ran locally and on Colab, with per-soundfont checkpoints versioned in the repository.",
+      tags: ["Python", "FastAPI", "React", "TypeScript", "Vite", "MusicGen", "AudioCraft", "FluidSynth", "Machine Learning", "Colab"],
       github: "https://github.com/btranTFT/MIDIremapANDgen",
       live: "https://midiremapandgen.vercel.app/",
       image: null,
@@ -107,8 +144,8 @@ const siteData = {
       title: "Tracking the Trackers",
       period: "2025",
       description:
-        "CS 5510 research project demonstrating privacy leakage in healthcare web portals through embedded tracking scripts. Implements a membership inference attack (78% accuracy against undefended systems) and evaluates differential privacy defenses using the Laplace mechanism. Replicates findings similar to the 2024 Kaiser Permanente incident using only synthetic data.",
-      tags: ["Python", "Flask", "Node.js", "JavaScript", "SQLite", "Machine Learning", "Cybersecurity", "Differential Privacy"],
+        "Exposed privacy leakage in a simulated healthcare portal via embedded tracking scripts. Ran a membership inference attack on anonymized session data, then evaluated three defenses (CSP headers, input sanitization, differential privacy) and quantified the attack-rate reduction of each strategy.",
+      tags: ["Python", "Flask", "Node.js", "JavaScript", "SQLite", "Machine Learning", "Cybersecurity", "Differential Privacy", "Privacy Attacks"],
       github: "https://github.com/btranTFT/TrackingPrivacyAttacks",
       live: null,
       image: null,
